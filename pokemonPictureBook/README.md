@@ -1,10 +1,6 @@
-# myFirstExtension
-
-chrome から chrome://extensions/　を起動
-chrome -> 「環境設定」　-> 「拡張機能」でもOK
-
-右上部にある、「デベロッパーモード」をONにする
-
-「パッケージ化されていない拡張期のを読み込む」で選択
+# pokemon picture book
+https://zukan.pokemon.co.jp/
+ポケモン図鑑の詳細を開いた際、ポケモンの名前の右側に
+ひらがなの名前を表示する
 
 
