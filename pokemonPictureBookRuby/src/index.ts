@@ -1,6 +1,4 @@
 // 冗長な文字列結合を解決
-// Todo README ruby用に変更する
-// ひらがなにはルビを振らない
 
 let elementList: Array<string> = ['name','subname'];
 elementList.forEach( value => elementReplace( value )　);
