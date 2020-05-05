@@ -1,11 +1,9 @@
-// Todo element to array
 // 冗長な文字列結合を解決
 // Todo README ruby用に変更する
-// typescript対応する
 // ひらがなにはルビを振らない
 
-elementReplace('name');
-elementReplace('subname');
+let elementList: Array<string> = ['name','subname'];
+elementList.forEach( value => elementReplace( value )　);
 
 function elementReplace( className : string ) : void {
     let element  = document.getElementsByClassName(className)[0];

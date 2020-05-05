@@ -4,8 +4,8 @@
 // Todo README ruby用に変更する
 // typescript対応する
 // ひらがなにはルビを振らない
-elementReplace('name');
-elementReplace('subname');
+var elementList = ['name', 'subname'];
+elementList.forEach(function (value) { return elementReplace(value); });
 function elementReplace(className) {
     var element = document.getElementsByClassName(className)[0];
     if (element) {
