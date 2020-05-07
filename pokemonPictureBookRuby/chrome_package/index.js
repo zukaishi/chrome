@@ -1,15 +1,14 @@
 "use strict";
-// Todo element to array
-// 冗長な文字列結合を解決
-// Todo README ruby用に変更する
-// typescript対応する
-// ひらがなにはルビを振らない
-var elementList = ['name', 'subname'];
+// todo 冗長な文字列結合を解決
+var elementList = ['name', 'subname', 'name__loadItem'];
 elementList.forEach(function (value) { return elementReplace(value); });
 function elementReplace(className) {
-    var element = document.getElementsByClassName(className)[0];
-    if (element) {
-        element.innerHTML = '<ruby>' + element.innerHTML + '<rt>' + katakanaToHiragana(element.innerHTML) + '</rt></ruby>';
+    var ele = document.getElementsByClassName(className);
+    if (ele.length > 0) {
+        for (var i = 0; i < ele.length; i++) {
+            var tag_format = "<ruby>from<rt>to</rt></ruby>";
+            ele[i].innerHTML = tag_format.replace("from", ele[i].innerHTML).replace("to", katakanaToHiragana(ele[i].innerHTML));
+        }
     }
 }
 function katakanaToHiragana(str) {
