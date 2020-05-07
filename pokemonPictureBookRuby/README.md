@@ -14,3 +14,5 @@
 
 6. 見たいポケモンをクリック
 
+## complete image
+![pokemon_picture_book_ruby](https://user-images.githubusercontent.com/22611735/81303243-6881b500-90b6-11ea-8571-e2ae2ea2bbbb.png)
