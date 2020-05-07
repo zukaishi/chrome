@@ -1,7 +1,7 @@
-// 冗長な文字列結合を解決
+// todo 冗長な文字列結合を解決
 
 let elementList: Array<string> = ['name','subname'];
-elementList.forEach( value => elementReplace( value )　);
+elementList.forEach( value => elementReplace( value ));
 
 function elementReplace( className : string ) : void {
     let element  = document.getElementsByClassName(className)[0];
