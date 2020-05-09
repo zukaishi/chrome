@@ -1,14 +1,15 @@
 "use strict";
-// todo 冗長な文字列結合を解決
 var elementList = ['name', 'subname', 'name__loadItem'];
-elementList.forEach(function (value) { return elementReplace(value); });
-function elementReplace(className) {
-    var ele = document.getElementsByClassName(className);
-    if (ele.length > 0) {
-        for (var i = 0; i < ele.length; i++) {
-            var tag_format = "<ruby>from<rt>to</rt></ruby>";
-            ele[i].innerHTML = tag_format.replace("from", ele[i].innerHTML).replace("to", katakanaToHiragana(ele[i].innerHTML));
-        }
+elementList.forEach(function (value) { return elementReplace(document.getElementsByClassName(value)); });
+function elementReplace(element) {
+    for (var i = 0; i < element.length; i++) {
+        var str = element[i].innerHTML;
+        element[i].innerHTML =
+            '<ruby>' +
+                str +
+                '<rt>' +
+                katakanaToHiragana(str) +
+                '</rt></ruby>';
     }
 }
 function katakanaToHiragana(str) {
