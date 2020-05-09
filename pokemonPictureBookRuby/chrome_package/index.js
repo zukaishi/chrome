@@ -1,6 +1,5 @@
 "use strict";
-var elementList = ['name', 'subname', 'name__loadItem'];
-elementList.forEach(function (value) { return elementReplace(document.getElementsByClassName(value)); });
+['name', 'subname', 'name__loadItem'].forEach(function (value) { return elementReplace(document.getElementsByClassName(value)); });
 function elementReplace(element) {
     for (var i = 0; i < element.length; i++) {
         var str = element[i].innerHTML;
