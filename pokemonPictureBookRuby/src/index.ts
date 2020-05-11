@@ -1,4 +1,4 @@
-['name', 'subname', 'name__loadItem'].forEach(value => elementReplace(document.getElementsByClassName(value)));
+['name', 'subname', 'name__loadItem',''].forEach(value => elementReplace(document.getElementsByClassName(value)));
 
 function elementReplace(element: HTMLCollectionBase ): void {
     for (var i = 0; i < element.length; i++) {
